@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils@0.1/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils@0.1/control_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils@0.2/drawing_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose@0.2/pose.js" crossorigin="anonymous"></script>
+
+    <style>
+    body {
+        background: white;
+        margin: 0;
+    }
+
+    #camera_canvas {
+        /*display: block; */
+        display: none;
+        margin-left: auto;
+        margin-right: auto;
+        transform: rotateY(180deg); 
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg); 
+    } 
+
+    #game_canvas {
+        height: 80vh;
+        width: 80wh;
+    }
+
+    </style>
+    
+    
+</head>
+
+
+<body>
+    <canvas id="game_canvas"></canvas>
+    <canvas id="camera_canvas" width="480px" height="270px"></canvas>
+    <video hidden id="input_video"></video>
+    <h1 id="distance"></h1>
+</body>
+
+<script src = "script.js"></script>
